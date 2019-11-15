@@ -1,5 +1,5 @@
 const testrunner = require('../tools/testrunner');
-const runSequence = require('run-sequence');
+const runSequence = require('gulp4-run-sequence');
 
 module.exports = function (gulp, plugins) {
   return gulp.task('test', () => {

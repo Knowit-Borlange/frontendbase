@@ -1,4 +1,4 @@
-const runSequence = require('run-sequence');
+const runSequence = require('gulp4-run-sequence');
 const server = require('../tools/server');
 
 module.exports = function (gulp, plugins) {
@@ -7,7 +7,7 @@ module.exports = function (gulp, plugins) {
     process.env.WATCH = 'watch';
 
     runSequence(
-        'build',
+        'buildAll',
         'watch'
     );
 

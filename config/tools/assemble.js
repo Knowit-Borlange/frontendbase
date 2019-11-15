@@ -1,6 +1,6 @@
 const gulp = require('gulp');
 const assemble = require('fabricator-assemble');
-const runSequence = require('run-sequence');
+const runSequence = require('gulp4-run-sequence');
 const del = require('del');
 const handlebars = require('handlebars');
 const flatten = require('gulp-flatten');
