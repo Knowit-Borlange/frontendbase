@@ -1,0 +1,31 @@
+// #e9474e
+
+$fa-font-path: "../fonts" !default;
+$block-padding: 1rem !default;
+
+// --------------- Bootstrap overrides
+// Functions, may be needed to 
+// create some of the bootstrap variables
+@import "../../../../node_modules/bootstrap/scss/functions"; 
+
+$primary: #e9474e; 
+
+$body-bg: #ececec !default;
+
+$link-color: #1e5c88 !default;
+
+$border-color: #ccc !default;
+
+// $font-weight-lighter:         lighter !default;
+// $font-weight-light:           300 !default;
+// $font-weight-normal:          400 !default;
+// $font-weight-bold:            600 !default;
+// $font-weight-bolder:          bolder !default;
+
+// Modals
+// $modal-xxxl: 1560px;
+// $modal-xxl: 1400px;
+// $modal-xl: 1140px;
+// $modal-lg: 800px;
+// $modal-md: 500px;
+// $modal-sm: 300px;

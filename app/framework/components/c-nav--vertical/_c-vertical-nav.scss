@@ -1,0 +1,149 @@
+$vertical-nav-bg: $primary !default;
+$vertical-nav-color: color-yiq($vertical-nav-bg) !default;
+$vertical-nav-border-width: $border-width !default;
+$vertical-nav-border-color: tint($vertical-nav-bg, 20%) !default;
+$vertical-nav-font-size: $font-size-base !default;
+$vertical-nav-icon-color: $vertical-nav-color !default;
+
+$vertical-nav-hover-bg: shade($vertical-nav-bg, 15%) !default;
+$vertical-nav-hover-color: $vertical-nav-color !default;
+
+$vertical-nav-sub-bg: $gray-200 !default;
+$vertical-nav-sub-color: color-yiq($vertical-nav-sub-bg) !default;
+$vertical-nav-sub-border-width: $vertical-nav-border-width !default;
+$vertical-nav-sub-border-color: $vertical-nav-border-color !default;
+
+$vertical-nav-sub-hover-bg: shade($vertical-nav-sub-bg, 15%) !default;
+$vertical-nav-sub-hover-color: $vertical-nav-sub-color !default;
+
+$vertical-nav-indent: $grid-gutter-width !default;
+
+.c-vertical-nav {
+  $base: &;
+  $base-sub-item: "";
+
+  &__list #{$base}__list {
+    $base-sub-item: &;
+  }
+
+  color: $vertical-nav-color;
+  background: $vertical-nav-bg;
+  width: 100%;
+
+  &[aria-expanded="false"] {
+    display: none;
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__link {
+    display: flex;
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+    padding: 0.5rem;
+    color: $vertical-nav-color;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      color: $vertical-nav-hover-color;
+      background-color: $vertical-nav-hover-bg;
+    }
+
+    #{$base-sub-item} & {
+      color: $vertical-nav-sub-color;
+
+      &:hover,
+      &:focus {
+        background-color: $vertical-nav-sub-hover-bg;
+      }
+    }
+  }
+
+  &__icon {
+    font-size: $font-size-base * 1.25;
+    line-height: 1.2;
+    color: $vertical-nav-icon-color;
+    flex-basis: $font-size-base * 2.25;
+
+    #{$base-sub-item} & {
+      display: none;
+    }
+  }
+
+  &__toggle-button {
+    @extend .btn;
+    @include button-variant($vertical-nav-bg, $vertical-nav-bg, $vertical-nav-hover-bg, $vertical-nav-hover-bg);
+    flex: 0 0 auto;
+    width: auto !important;
+    max-width: 100%;
+    border-radius: 0;
+
+    #{$base-sub-item} & {
+      @include button-variant($vertical-nav-sub-bg, $vertical-nav-sub-bg, $vertical-nav-sub-hover-bg, $vertical-nav-sub-hover-bg);
+    }
+
+    &__text {
+      font-size: $font-size-base;
+    }
+
+    &__toggle-text {
+      @include sr-only;
+    }
+
+    &::after {
+      @extend .fa;
+      content: fa-content($fa-var-plus);
+      transition: all ease 0.25s;
+    }
+
+    &[aria-expanded="true"]::after {
+      transform: rotate(45deg);
+    }
+
+    // If no link, only button to open collapse
+    &--fullwidth {
+      width: 100% !important;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__item {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-bottom: solid $vertical-nav-border-width $vertical-nav-border-color;
+
+    #{$base}__item {
+      border-top: solid $vertical-nav-sub-border-width $vertical-nav-sub-border-color;
+      border-bottom: none;
+    }
+
+    > div {
+      display: flex;
+      width: 100%;
+    }
+
+    ul {
+      background: $vertical-nav-sub-bg;
+
+      > li > ul > li > div > a {
+        padding-left: $vertical-nav-indent;
+      }
+
+      > li > ul > li > ul > li > div > a {
+        padding-left: $vertical-nav-indent * 2;
+      }
+
+      > li > ul > li > ul > li > ul > li > div > a {
+        padding-left: $vertical-nav-indent * 4;
+      }
+    }
+  }
+}

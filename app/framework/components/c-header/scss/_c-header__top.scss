@@ -1,0 +1,14 @@
+#{$header}__top {
+  color: $header-top-color;
+  background: $header-top-bg;
+
+  @include media-breakpoint-down(md) {
+    width: 100%;
+
+    .container {
+      max-width: 100%;
+    }
+  }
+}
+
+

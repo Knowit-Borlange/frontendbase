@@ -1,0 +1,23 @@
+.c-side-nav-toggler {
+  $base: &;
+
+  margin-left: auto;
+  @include button-variant($header-bg, $header-bg);
+
+  &::before {
+    @extend .fa;
+    content: fa-content($fa-var-bars);
+  }
+
+  span {
+    @include sr-only();
+  }
+
+  @each $key, $value in $grid-breakpoints {
+    &#{$base}--hide-#{$key} {
+      @include media-breakpoint-up($key) {
+        display: none;
+      }
+    }
+  }
+}

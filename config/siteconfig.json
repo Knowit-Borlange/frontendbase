@@ -4,5 +4,5 @@
   "foo": process.env.NODE_ENV,
   "sitename": "Recreative",
   "logopath": "../images/logo-recreative.png",
-  "inverted-logopath": ""
+  "inverted-logopath": "../images/logo-recreative-inverted.png"
 }

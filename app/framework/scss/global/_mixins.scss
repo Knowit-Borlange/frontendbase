@@ -1,0 +1,27 @@
+// SHADE
+/// Mixes a color with black. From bourbon.
+@function shade(
+  $color,
+  $percent
+) {
+  @if not _is-color($color) {
+    @error "`#{$color}` is not a valid color for the `$color` argument in " +
+           "the `shade` mixin.";
+  } @else {
+    @return mix(#000, $color, $percent);
+  }
+}
+
+// TINT
+/// Mixes a color with white. From bourbon
+@function tint(
+  $color,
+  $percent
+) {
+  @if not _is-color($color) {
+    @error "`#{$color}` is not a valid color for the `$color` argument in " +
+           "the `tint` mixin.";
+  } @else {
+    @return mix(#fff, $color, $percent);
+  }
+}
