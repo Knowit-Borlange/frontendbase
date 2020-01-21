@@ -8,7 +8,17 @@
   },
   "author": "The cycling farmer",
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "accessible-bootstrap-carousel": "^2.5.0",
+    "bootstrap": "^4.4.1",
+    "jquery": "^3.4.1",
+    "jquery-ui": "^1.12.1",
+    "jquery.easing": "^1.4.1",
+    "perfect-scrollbar": "^1.5.0",
+    "popper.js": "^1.16.0",
+    "simpler-sidebar": "^2.2.5",
+    "what-input": "^5.2.6"
+  },
   "devDependencies": {
     "@babel/core": "^7.7.2",
     "@babel/plugin-proposal-class-properties": "^7.0.0",
@@ -50,6 +60,7 @@
     "gulp-flatten": "^0.4.0",
     "gulp-if": "^3.0.0",
     "gulp-load-plugins": "^2.0.1",
+    "gulp-modify-css-urls": "^2.0.0",
     "gulp-rename": "^1.4.0",
     "gulp-rev-all": "^2.0.2",
     "gulp-run": "^1.7.1",

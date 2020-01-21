@@ -20,7 +20,10 @@ module.exports = () => {
   //COPY.FONTS
   const copyFonts = () => {
     return new Promise((resolve, reject) => {
-      gulp.src(process.env.MOCK_FONTS + '**/*', { base: process.env.MOCK_FONTS })
+      gulp.src([
+        process.env.MOCK_FONTS + '**/*',
+        'node_modules/@fortawesome/fontawesome-free/webfonts/*'
+      ])
         .pipe(gulp.dest(process.env.BUILD_PATH + 'fonts'))
         .on('end', resolve)
         .on('error', reject);

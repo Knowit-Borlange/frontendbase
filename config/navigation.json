@@ -1,0 +1,50 @@
+{
+    "mobile-navigation": {
+        "hide-breakpoint": "lg"
+    },
+    "main-navigation": {
+        "Services": {
+            "url": "#"
+        },
+        "Products": {
+            "url": "#"
+        },
+        "Conctact us": {
+            "url": "#"
+        }
+    },
+    "sidenavigation": {
+        "Services": {
+            "url": [
+                "p-docs.html"
+            ],
+            "subMenu": {
+                "Undernivå (endast demo)": {
+                    "url": [
+                        "p-docs.html"
+                    ],
+                    "subMenu": {
+                        "Undernivå 2 (endast demo)": {
+                            "url": [
+                                "p-docs.html"
+                            ],
+                            "subMenu": []
+                        }
+                    }
+                }
+            }
+        },
+        "Products": {
+            "url": [
+                "p-design-colors.html"
+            ],
+            "subMenu": []
+        },
+        "Contact us": {
+            "url": [
+                "p-component-library.html"
+            ],
+            "subMenu": {}
+        }
+    }
+}

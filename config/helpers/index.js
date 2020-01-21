@@ -4,13 +4,17 @@ module.exports = function (handlebars) {
       json = require('./json'),
       ifCond = require('./ifCond'),
       concat = require('./concat'),
+      jsonLength = require('./jsonLength'),
+      valueComparison = require('./valueComparison'),
       helpers = {
           times: times,
           lipsumtitle: lorem.lipsumtitle,
           lipsum: lorem.lipsum,
           json: json,
           ifCond: ifCond,
-          concat: concat
+          concat: concat,
+          jsonLength: jsonLength,
+          valueComparison: valueComparison
       };
 
   return helpers;

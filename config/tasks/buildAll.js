@@ -11,10 +11,14 @@ const manifestfile = require('../tasks/manifestfile');
 
 module.exports = function (gulp, plugins) {
   return gulp.task('buildAll', () => {
-    runSequence(
-      'buildHTML',
-      'buildJS',
-      'buildSCSS'
-    );
+    return new Promise(function(resolve, reject) {
+      runSequence(
+        'buildHTML',
+        'buildJS',
+        'buildSCSS'
+      );
+      resolve();
+    });
+    
   });
 };

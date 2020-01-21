@@ -6,12 +6,15 @@ module.exports = function (gulp, plugins) {
     process.env.NODE_ENV = 'development';
     process.env.WATCH = 'watch';
 
-    runSequence(
+    return new Promise(function (resolve, reject) {
+      runSequence(
         'buildAll',
         'watch'
-    );
+      );
 
-    server();
+      server();
 
+      resolve();
+    });
   });
 };

@@ -4,15 +4,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Reaktor Base: {{page-name}}</title>
-  <link rel="stylesheet" href="{{siteconfig.csspath}}" />
+  <title>{{page-name}}</title>
+  <link rel="stylesheet" href="{{siteconfig.csspath}}app.css" />
 </head>
 
-<body class="page {{page-name}}">
+<body class="page {{page-name}} {{body-class}}">
+  {{>c-side-nav}}
   {{>c-header}}
   {% body %}
   {{>c-footer}}
-  <script src="{{siteconfig.scriptpath}}"></script>
+  <script src="{{siteconfig.scriptpath}}app.js"></script>
 </body>
 
 </html>

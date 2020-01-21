@@ -40,7 +40,7 @@ module.exports = () => {
       .pipe(flatten())
       .pipe(gulp.dest(process.env.BUILD_PATH + 'js'))
       .pipe(gulpif(process.env.NODE_ENV !== 'development', uglify()))
-      .pipe(gulpif(process.env.NODE_ENV !== 'development', rename({ suffix: '.min' })))
+      //.pipe(gulpif(process.env.NODE_ENV !== 'development', rename({ suffix: '.min' })))
       .pipe(gulpif(process.env.NODE_ENV !== 'development', flatten()))
       .pipe(gulpif(process.env.NODE_ENV !== 'development', gulp.dest(process.env.BUILD_PATH + 'js')));
   };

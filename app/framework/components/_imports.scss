@@ -1,3 +1,9 @@
 @import
 	"c-footer/c-footer",
   "c-header/c-header";
+
+@import 
+  "c-nav--main/c-main-nav",
+  "c-nav--shortcuts/c-shortcuts-nav",
+  "c-nav--side/c-side-nav",
+  "c-nav--vertical/c-vertical-nav";

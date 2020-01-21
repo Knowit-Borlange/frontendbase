@@ -1,5 +1,8 @@
 {
-  "csspath": "/stylesheets/app.css",
-  "scriptpath": "/js/app.js",
-  "foo": process.env.NODE_ENV
+  "csspath": "/stylesheets/",
+  "scriptpath": "/js/",
+  "foo": process.env.NODE_ENV,
+  "sitename": "Recreative",
+  "logopath": "../images/logo-recreative.png",
+  "inverted-logopath": ""
 }

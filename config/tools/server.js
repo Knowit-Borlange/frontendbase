@@ -6,7 +6,7 @@ module.exports = function () {
     connect.server({
       root: process.env.BUILD_PATH,
       livereload: false,
-      port: 8080
+      port: 8081
     });
     resolve();
   });
