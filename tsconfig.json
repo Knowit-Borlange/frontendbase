@@ -1,0 +1,67 @@
+{
+    "compilerOptions": {
+      "target": "ES5",
+      "module": "esnext",
+      "strict": false,
+      "strictPropertyInitialization": false,
+      "jsx": "preserve",
+      "importHelpers": true,
+      "moduleResolution": "node",
+      "esModuleInterop": true,
+      "allowSyntheticDefaultImports": true,
+      "sourceMap": true,
+      "allowJs": true,
+      "importsNotUsedAsValues": "preserve",
+      "declaration": false,
+      "downlevelIteration": true,
+      //"noEmit": true,
+      //"baseUrl": "./",
+      "baseUrl": "./app",
+      "outDir": "./build",
+      "types": [
+        "webpack-env"
+      ],
+      "typeRoots": [
+        "./node_modules/@types",
+        "./app/vue-js/typings"
+      ],
+      "paths": {
+        "@models/*": [ "vue-js/models/*" ],
+        "@mixins/*": [ "vue-js/mixins/*" ],
+        "@generated/*": [ "vue-js/generated/*" ],
+        "@components/*": [ "vue-js/components/*" ],
+        "@directives/*": [ "vue-js/directives/*" ],
+        "@util/*": [ "vue-js/util/*" ],
+        "tslib": [ "./node_modules/tslib/tslib.d.ts" ]
+      },
+      "lib": [
+        "esnext",
+        "dom",
+        "dom.iterable",
+        "scripthost"
+      ]
+    },
+    "files": [
+      "./app/vue-js/shims-vue.d.ts"
+    ],
+    "include": [
+      "./app/**/*", 
+      "@types/**/*.ts",
+      "vue-js/**/*.ts",
+      "vue-js/models/*.ts",
+      "vue-js/mixins/*.ts",
+      "vue-js/directives/*.ts",
+      "vue-js/util/*.ts",
+      "vue-js/**/*.ts",
+      "vue-js/**/*.tsx",
+      "vue-js/**/*.vue",
+      "vue-js/generated/**/*.ts",
+      "vue-js/generated/*.ts",
+      "vue-js/ppt-app/**/*.vue",
+      "tests/**/*.ts",
+      "tests/**/*.tsx"
+    ],
+    "exclude": [
+      "node_modules"
+    ]
+  }

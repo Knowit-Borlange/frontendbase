@@ -171,7 +171,8 @@ We recommend you to use BEM – http://csswizardry.com/2013/01/mindbemding-getti
 .c-example__element {}
 .c-example--modifier {}
 ```
-
+### Vue
+Don't remeber to set up webpack.site.config
 
 ### Remove vue
 ts-loader
@@ -196,3 +197,6 @@ babel-polyfill
 babel-loader
 @typescript-eslint/eslint-plugin
 vue
+
+
+remove build, develop and watch from package.json
