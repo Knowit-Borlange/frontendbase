@@ -171,3 +171,28 @@ We recommend you to use BEM – http://csswizardry.com/2013/01/mindbemding-getti
 .c-example__element {}
 .c-example--modifier {}
 ```
+
+
+### Remove vue
+ts-loader
+typescript
+vue-loader
+vue-style-loader
+vue-template-compiler
+webpack
+webpack-bundle-analyzer
+webpack-cli
+webpack-merge
+speed-measure-webpack-plugin
+mini-css-extract-plugin
+html-webpack-plugin
+fork-ts-checker-webpack-plugin
+fork-ts-checker-notifier-webpack-plugin
+favicons-webpack-plugin
+favicons
+css-minimizer-webpack-plugin
+clean-webpack-plugin
+babel-polyfill
+babel-loader
+@typescript-eslint/eslint-plugin
+vue
