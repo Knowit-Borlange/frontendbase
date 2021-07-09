@@ -5,21 +5,14 @@
 
 @import "bootstrap/bootstrap";
 
+
 // @import
-//   "../../../node_modules/@fortawesome/fontawesome-pro/scss/fontawesome",
-//   "../../../node_modules/@fortawesome/fontawesome-pro/scss/solid",
-//   "../../../node_modules/@fortawesome/fontawesome-pro/scss/light",
-//   "../../../node_modules/@fortawesome/fontawesome-pro/scss/regular",
-//   "../../../node_modules/@fortawesome/fontawesome-pro/scss/brands";
+//   "../../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome",
+//   "../../../node_modules/@fortawesome/fontawesome-free/scss/solid",
+//   "../../../node_modules/@fortawesome/fontawesome-free/scss/regular",
+//   "../../../node_modules/@fortawesome/fontawesome-free/scss/brands";
 
-@import
-  "../../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome",
-  "../../../node_modules/@fortawesome/fontawesome-free/scss/solid",
-  "../../../node_modules/@fortawesome/fontawesome-free/scss/regular",
-  "../../../node_modules/@fortawesome/fontawesome-free/scss/brands";
 
-@import "../js/check-breakpoint/check-breakpoint";
-@import "../../../node_modules/accessible-bootstrap-carousel/src/accessible-bootstrap-carousel";
 
 //project - imports
 @import
