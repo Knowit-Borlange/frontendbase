@@ -1,7 +1,7 @@
 const path = require('path');
 const appBasePath = "./app/vue-js/";
 const projectPath = '../';
-const mockupPath = '../';
+const mockupPath = './';
 
 const outputPath = projectPath + "/Static/dist/vue-js";
 const fonts = projectPath + "/Static/dist/fonts";
