@@ -1,13 +1,11 @@
 const gulp = require('gulp');
 const browserify = require('browserify');
 const source = require('vinyl-source-stream');
-const babelify = require('babelify');
 const flatten = require('gulp-flatten');
 const watchify   = require('watchify');
 const util = require('gulp-util');
-const uglify = require('gulp-uglify');
+const terser = require('gulp-terser');
 const buffer = require('vinyl-buffer');
-const rename = require('gulp-rename');
 const gulpif = require('gulp-if');
 require('dotenv').config();
 
@@ -39,7 +37,7 @@ module.exports = () => {
       .pipe(buffer())
       .pipe(flatten())
       .pipe(gulp.dest(process.env.BUILD_PATH + 'js'))
-      .pipe(gulpif(process.env.NODE_ENV !== 'development', uglify()))
+      .pipe(gulpif(process.env.NODE_ENV !== 'development', terser()))
       //.pipe(gulpif(process.env.NODE_ENV !== 'development', rename({ suffix: '.min' })))
       .pipe(gulpif(process.env.NODE_ENV !== 'development', flatten()))
       .pipe(gulpif(process.env.NODE_ENV !== 'development', gulp.dest(process.env.BUILD_PATH + 'js')));

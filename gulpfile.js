@@ -12,5 +12,4 @@ const buildSCSS = require('./config/tasks/buildSCSS')(gulp, plugins);
 const watch = require('./config/tasks/watch')(gulp, plugins);
 const develop = require('./config/tasks/develop')(gulp, plugins);
 const setup = require('./config/tasks/setup')(gulp, plugins);
-const accessibility = require('./config/tasks/accessibility')(gulp, plugins);
 const manifestfile = require('./config/tasks/manifestfile')(gulp, plugins);

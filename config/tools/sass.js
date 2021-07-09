@@ -1,9 +1,10 @@
 const gulp = require('gulp');
-const sass = require('gulp-sass');
+const sass = require('gulp-dart-sass');
 const flatten = require('gulp-flatten');
 const util = require('gulp-util');
 const sourcemaps = require('gulp-sourcemaps');
 const gulpif = require('gulp-if');
+const cleanCSS = require('gulp-clean-css');
 const gulpmodifycssurls = require('gulp-modify-css-urls');
 
 require('dotenv').config();
@@ -26,6 +27,7 @@ module.exports = () => {
         //append: '?cache-buster'
       }))
       .pipe(flatten())
+      .pipe(cleanCSS())
       .pipe(gulp.dest(process.env.BUILD_PATH + 'stylesheets'))
       .on('end', () => {
         util.log(util.colors.green('Finished compiling CSS... 👍'));
